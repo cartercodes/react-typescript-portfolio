@@ -11,12 +11,14 @@ export const projects: Project[] = [
         name: 'Birthdate Calculator',
         image: bdaycountdown,
         github: 'https://github.com/cartercodes/birthday-countdown',
+        live:''
     },
     {
         id: 2,
         name: 'Weather Forecast',
         image: weatherapp,
         github: 'https://github.com/cartercodes/weather-app',
+        live: ''
     },
     {
         id: 3,
@@ -30,5 +32,6 @@ export const projects: Project[] = [
         name: 'Daily Smarty',
         image: dailysmart,
         github: 'https://github.com/cartercodes/dailysmartyUI',
+        live: ''
     }
 ];
