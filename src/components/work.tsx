@@ -6,7 +6,7 @@ import { projects } from '../data/data.tsx';
 const Work: React.FC = () => {
 
     return (
-        <div className='w-full md:h-screen text-gray-300 bg-[#0a192f]'>
+        <div id='4' className='w-full md:h-screen text-gray-300 bg-[#0a192f]'>
 
             <div className='max-w-[1000px] mx-auto p-4 flex flex-col justify-center w-full h-full'>
 
@@ -19,7 +19,7 @@ const Work: React.FC = () => {
 
                 {/* Projects Container */}
                 <div className='grid sm:grid-cols-2 md:grid-cols-3 gap-4'>
-
+            
                     {/* Project Item */}
                     {projects.map((project, index) => (
                         <ProjectCard key={index} project={project} />
@@ -40,10 +40,12 @@ interface ProjectCardProps {
 const ProjectCard: React.FC<ProjectCardProps> = ({
     project
 }) => {
+    const cardStyle = {
+        backgroundImage: `url(${project.image})`,
+    };
 
     return (
-        <div className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center text-center items-center mx-auto content-div'>
-
+        <div className='shadow-lg shadow-[#040c16] group container rounded-md flex justify-center text-center items-center mx-auto content-div' style={cardStyle} >
             {/* Hover Effects */}
             <div className='opacity-0 group-hover:opacity-100'>
                 <span className='text-2xl font-bold text-white tracking-wider'>

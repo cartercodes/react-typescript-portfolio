@@ -18,7 +18,7 @@ export const projects: Project[] = [
         name: 'Weather Forecast',
         image: weatherapp,
         github: 'https://github.com/cartercodes/weather-app',
-        live: ''
+        live: 'https://cartercodes.github.io/weather-app/dist/'
     },
     {
         id: 3,

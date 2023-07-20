@@ -11,14 +11,14 @@ import './App.css';
 
 const App: React.FC = () => {
   return (
-    <div>
-      <Navbar />
-      <Home />
-      <About />
-      <Skills />
-      <Work />
-      <Contact />
-    </div>
+      <div>
+        <Navbar />
+        <Home />
+        <About />
+        <Skills />
+        <Work />
+        <Contact />
+      </div>
   );
 }
 
