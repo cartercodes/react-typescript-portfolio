@@ -2,7 +2,6 @@ import { Project } from '../types/types.tsx';
 
 import bdaycountdown from '../assets/projects/bdaycountdown.png';
 import weatherapp from '../assets/projects/weatherapp.png';
-import churchscreen from '../assets/projects/churchscreenshot.png'
 import dailysmart from '../assets/projects/dailysmarty.png'
 
 export const projects: Project[] = [
