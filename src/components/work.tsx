@@ -14,7 +14,7 @@ const Work: React.FC = () => {
                     <p className='text-4xl font-bold inline border-b-4 text-gray-300 border-pink-600'>
                         Work
                     </p>
-                    <p className='py-6'>// Check out some of my recent work</p>
+                    <p className='py-6'>//Check out some of my recent work.<br></br><br></br>These are projects that have been built utilizing React, Redux and Javascript.<br></br>Additonaly, The project you are currently viewing was built utilizing React and Typescript.</p>
                 </div>
 
                 {/* Projects Container */}

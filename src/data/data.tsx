@@ -8,28 +8,21 @@ import dailysmart from '../assets/projects/dailysmarty.png'
 export const projects: Project[] = [
     {
         id: 1,
-        name: 'Birthdate Calculator',
+        name: 'React: Birthdate Calculator',
         image: bdaycountdown,
         github: 'https://github.com/cartercodes/birthday-countdown',
         live:''
     },
     {
         id: 2,
-        name: 'Weather Forecast',
+        name: 'React-Redux: Weather Forecast',
         image: weatherapp,
         github: 'https://github.com/cartercodes/weather-app',
         live: 'https://cartercodes.github.io/weather-app/dist/'
     },
     {
         id: 3,
-        name: 'The Remnant',
-        image: churchscreen,
-        github: '', 
-        live:'https://www.theremnantnc.org/the-remenant-movement'
-    },
-    {
-        id: 4,
-        name: 'Daily Smarty',
+        name: 'React-Redux: Daily Smarty',
         image: dailysmart,
         github: 'https://github.com/cartercodes/dailysmartyUI',
         live: ''

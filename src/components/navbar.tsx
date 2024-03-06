@@ -9,7 +9,7 @@ import { HiOutlineMail } from 'react-icons/hi';
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import reactLogo from '../assets/signature.png';
 import { Link } from 'react-scroll';
-import Resume from '../assets/personal_resume.pdf';
+import Resume from '../assets/Tech.Resume.RW.pdf';
 
 const Navbar: React.FC = () => {
     const [nav, setNav] = useState(false);
@@ -112,14 +112,6 @@ const Navbar: React.FC = () => {
                             href='https://github.com/cartercodes'
                         >
                             Github <FaGithub size={30} />
-                        </a>
-                    </li>
-                    <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#6fc2b0]'>
-                        <a
-                            className='flex justify-between items-center w-full text-gray-300'
-                            href='mailto:mitchcarterd@gmail.com'
-                        >
-                            Email <HiOutlineMail size={30} />
                         </a>
                     </li>
                     <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]'>

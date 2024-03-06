@@ -27,7 +27,11 @@ const About: React.FC<Props> = () => {
                     </div>
 
                     <div>
-                        <p>I am passionate about building excellent software that improves the lives of those around me. I specialize in creating software for clients ranging from individuals and small-businesses all the way to large enterprise corporations. What would you do if you had a software expert available at your fingertips?</p>
+                        <p>I am a Full Stack developer with specialties in Node, React, and Typescript. <br></br><br></br>I have utilized Vue3 and Pinia in my most recent position. In my most recent personal projects they have been built utilizing node, react in typescript and redux.</p>
+                        <br></br>
+                        <p>I am currently learning Python to delve deeper into Data Analytics and Machine Learning.</p>
+                        <br></br>
+                        <p>To see examples of my work, please visit my <a href='https://github.com/cartercodes' className='font-bold border-b-2 border-pink-600'>Github</a> to see examples of my work or follow me here for updates in my in my work log.</p>
                     </div>
 
                 </div>
