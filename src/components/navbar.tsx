@@ -8,7 +8,7 @@ import {
 import { BsFillPersonLinesFill } from 'react-icons/bs';
 import reactLogo from '../assets/signature.png';
 import { Link } from 'react-scroll';
-import Resume from '../assets/Tech.Resume.RW.pdf';
+import Resume from '../assets/carter_resume.pdf';
 
 const Navbar: React.FC = () => {
     const [nav, setNav] = useState(false);
