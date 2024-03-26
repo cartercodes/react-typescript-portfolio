@@ -10,6 +10,35 @@ import reactLogo from '../assets/signature.png';
 import { Link } from 'react-scroll';
 import Resume from '../assets/ATS.pdf';
 
+const menuItems = [
+    { name: 'Home', to: '1' },
+    { name: 'About', to: '2' },
+    { name: 'Skills', to: '3' },
+    { name: 'Work', to: '4' },
+    { name: 'Contact', to: '5' }
+];
+
+const socialLinks = [
+    {
+        name: 'Linkedin',
+        href: 'https://www.linkedin.com/in/mitchcarterd/',
+        icon: <FaLinkedin size={30} />,
+        backgroundColor: 'bg-blue-600',
+    },
+    {
+        name: 'Github',
+        href: 'https://github.com/cartercodes',
+        icon: <FaGithub size={30} />,
+        backgroundColor: 'bg-[#333333]',
+    },
+    {
+        name: 'Resume',
+        href: Resume,
+        icon: <BsFillPersonLinesFill size={30} />,
+        backgroundColor: 'bg-[#565f69]',
+    },
+];
+
 const Navbar: React.FC = () => {
     const [nav, setNav] = useState(false);
     const handleClick = (): void => setNav(!nav);
@@ -22,32 +51,13 @@ const Navbar: React.FC = () => {
 
             {/* menu */}
             <ul className='hidden md:flex'>
-                <li>
-                    <Link to='1' smooth={true} duration={500}>
-                        Home
-                    </Link>
-                    
-                </li>
-                <li>
-                    <Link to='2' smooth={true} duration={500}>
-                        About
-                    </Link>
-                </li>
-                <li>
-                    <Link to='3' smooth={true} duration={500}>
-                        Skills
-                    </Link>
-                </li>
-                <li>
-                    <Link to='4' smooth={true} duration={500}>
-                        Work
-                    </Link>
-                </li>
-                <li>
-                    <Link to='5' smooth={true} duration={500}>
-                        Contact
-                    </Link>
-                </li>
+                {menuItems.map((item, index) => (
+                    <li key={index}>
+                        <Link to={item.to} smooth={true} duration={500} className="hover:text-pink-600">
+                            {item.name}
+                        </Link>
+                    </li>
+                ))}
             </ul>
 
             {/* Hamburger */}
@@ -63,64 +73,31 @@ const Navbar: React.FC = () => {
                         : 'absolute top-0 left-0 w-full h-screen bg-[#0a192f] flex flex-col justify-center items-center'
                 }
             >
-                <li className='py-6 text-4xl'>
-                    <Link onClick={handleClick} to='1' smooth={true} duration={500}>
-                        Home
-                    </Link>
-                </li>
-                <li className='py-6 text-4xl'>
-                    {' '}
-                    <Link onClick={handleClick} to='2' smooth={true} duration={500}>
-                        About
-                    </Link>
-                </li>
-                <li className='py-6 text-4xl'>
-                    {' '}
-                    <Link onClick={handleClick} to='3' smooth={true} duration={500}>
-                        Skills
-                    </Link>
-                </li>
-                <li className='py-6 text-4xl'>
-                    {' '}
-                    <Link onClick={handleClick} to='4' smooth={true} duration={500}>
-                        Work
-                    </Link>
-                </li>
-                <li className='py-6 text-4xl'>
-                    {' '}
-                    <Link onClick={handleClick} to='5' smooth={true} duration={500}>
-                        Contact
-                    </Link>
-                </li>
+                {menuItems.map((item, index) => (
+                    <li key={index} className='py-6 text-4xl'>
+                        <Link onClick={handleClick} to={item.to} smooth={true} duration={500}>
+                            {item.name}
+                        </Link>
+                    </li>
+                ))}
             </ul>
 
             {/* Social icons */}
             <div className='hidden lg:flex fixed flex-col top-[35%] left-0'>
                 <ul>
-                    <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-blue-600'>
-                        <a
-                            className='flex justify-between items-center w-full text-gray-300'
-                            href='https://www.linkedin.com/in/mitchcarterd/'
+                    {socialLinks.map((link, index) => (
+                        <li
+                            className={`w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 ${link.backgroundColor}`}
+                            key={index}
                         >
-                            Linkedin <FaLinkedin size={30} />
-                        </a>
-                    </li>
-                    <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#333333]'>
-                        <a
-                            className='flex justify-between items-center w-full text-gray-300'
-                            href='https://github.com/cartercodes'
-                        >
-                            Github <FaGithub size={30} />
-                        </a>
-                    </li>
-                    <li className='w-[160px] h-[60px] flex justify-between items-center ml-[-100px] hover:ml-[-10px] duration-300 bg-[#565f69]'>
-                        <a
-                            className='flex justify-between items-center w-full text-gray-300'
-                            href={Resume}
-                        >
-                            Resume <BsFillPersonLinesFill size={30} />
-                        </a>
-                    </li>
+                            <a
+                                className='flex justify-between items-center w-full text-gray-300'
+                                href={link.href}
+                            >
+                                {link.name} {link.icon}
+                            </a>
+                        </li>
+                    ))}
                 </ul>
             </div>
         </div>
